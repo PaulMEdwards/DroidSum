@@ -1,58 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/TableLayout1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical" >
 
-    <TabHost
-        android:id="@android:id/tabhost"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+      <TextView
+          android:id="@+id/textViewInputFile"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/inputFile" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical" >
+      <EditText
+          android:id="@+id/editTextInputFile"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:ems="10"
+          android:text="/sdcard/testfile" >
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" >
-            </TabWidget>
+          <requestFocus />
+      </EditText>
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent" >
+      <TextView
+          android:id="@+id/textViewCalculationMethod"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/calculationMethod" />
 
-                <LinearLayout
-                    android:id="@+id/tab1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" >
+      <Spinner
+          android:id="@+id/spinnerCalculationMethods"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:entries="@string/calculationMethodValues" />
 
-                    <GridView
-                        android:id="@+id/gridView1"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:numColumns="3" >
-                    </GridView>
+      <Button
+          android:id="@+id/buttonCalculate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/buttonCalculate" />
 
-                </LinearLayout>
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/calculationResult" />
 
-                <LinearLayout
-                    android:id="@+id/tab2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" >
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tab3"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" >
-                </LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
-
-</TableLayout>
+      <EditText
+          android:id="@+id/editTextResult"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:ems="10"
+          android:text="" />
+  </LinearLayout>
